@@ -1,0 +1,8 @@
+1. Jeżeli nie posiadasz środowiska Node.js, pobierz je z https://nodejs.org/
+2. Otwórz folder projektu w konsoli
+3. Wpisz "node index" i naciśnij enter
+4. W przeglądarcę internetowej wpisz adres "localhost"
+5. Powinna otworzyć się strona internetowa z mapą
+6. Wyszukaj interesującą cię linię
+7. Kliknij na interesujący cię pojazd przy lewej krawędzi okna
+8. Sprawdź detale pojazdu przy prawej krawędzi okna oraz jego lokalizacje na mapie
