@@ -22,4 +22,4 @@
 [1]: https://api.um.warszawa.pl/
 
 
-> ###### Projekt wykonał Kacper Żuk na lekcje Programowania Aplikacji Internetowych w [Technikum elektronicznym nr.1 im. Marcina Kasprzaka](https://kasprzak.edu.pl)
+> ###### Projekt wykonał *Kacper Żuk* na lekcje Programowania Aplikacji Internetowych w [Technikum elektronicznym nr.1 im. Marcina Kasprzaka](https://kasprzak.edu.pl)
