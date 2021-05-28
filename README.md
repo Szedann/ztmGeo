@@ -2,7 +2,6 @@
 
 ### [Strona internetowa](https://sandown.live)
 ###### (być może niedziałająca)
-### [Instrukcja](/instrukcja.txt)
 
 >## Wykorzystane dane:
 > * Dane [Miasta Stołecznego Warszawa](1)
