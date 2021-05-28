@@ -18,6 +18,7 @@
 >    * dotenv
 >    * ejs
 >    * jsdom
+>    * qrcode
 
 [1]: https://api.um.warszawa.pl/
 
