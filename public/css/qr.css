@@ -1,0 +1,26 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    border-left: 5px solid yellow;
+    padding: 10px;
+}
+
+input, select{
+    outline: 0;
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+main img{
+    width: 300px;
+    margin: 0 auto;
+}

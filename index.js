@@ -9,3 +9,5 @@ console.log("############")
 
 const ztm = new UM(process.env.TOKEN)
 
+ztm.getQRCode(10002, 0)
+

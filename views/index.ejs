@@ -1,59 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lokalizacja autobusów</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-    <script defer src="scripts/map.js"></script>
-    <script src="scripts/utils.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <script>
-
-        function onload(){
-            const title = 'O projekcie'
-
-            const content = `Projekt wykonał <b>Kacper Żuk</b><br>
-            Wykorzystane zasoby:
-            <ol>
-                <li>Dane dotyczące komunikacji miejskiej - <a href="http://api.um.warszawa.pl" target="_blank">Miasto Stołeczne Warszawa</a></li>
-                <li>Mapy - <a href="https://www.mapbox.com/" target="_blank">mapbox</a></li>
-                <li>Zdjęcia - <a href="http://wawakom.pl" target="_blank">wawakom.pl</a>
-            </ol>`
-            document.getElementById("about-btn").onclick = function(){popup(title, content, 'about')}
-
-            // document.getElementById("manual-btn").onclick = function(){popupSRC("Instrukcja", "/data/instrukcja.txt", 'manual')}
-
-        }
-    </script>
+    <title>Tajemnicze wehikuły miejskie</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="onload()">
+<body>
     <main>
-        <div id='map'></div>
-        <nav>
-            <section>
-                <input type="text" autofocus  id="line" placeholder="linia"><input type="button" value="szukaj" onclick="getLine()">
-            </section>
-            <div onclick="hideResults()" class="amount">
-                <span id="amountOfResults">Wczytywanie...</span>
-                <a id="show-hide">
-                    <i class="fas fa-chevron-up"></i>
-                </a>
-            </div>
-            
-            <div id="results">
-            </div>
-        </nav>
-        <div id="busInfo">Informacje o pojeździe</div>
+        <h2>Tajemnicze wehikuły miejskie</h2>
+        <div>
+            <a href="/qr">kody QR</a>
+            <a href="/buses">lokalizacje autobusów</a>
+        </div>
     </main>
-    <footer>
-        Witrynę wykonał Kacper Żuk | <a id="about-btn">o projekcie</a>
-         <!-- | <a id="manual-btn">Instrukcja</a> -->
-    </footer>
 </body>
 </html>

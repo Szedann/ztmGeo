@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const {JSDOM} = require('jsdom')
-
+const qrcode = require('qrcode')
+const {createCanvas, loadImage} = require('canvas')
 
 let key;
 
@@ -40,6 +41,11 @@ class UM {
         const imageFileName = queryDOM.window.document.getElementsByClassName('zdjecie').item(0).children.item(0).alt
         if(imageFileName.toLowerCase() == 'brak zdjęcia') return '/images/1x1.png'
         return 'http://wawakom.pl/Wawakom/web/uploads/photos/'+imageFileName
+    }
+    getQRCode(id = 1000, type = 0){
+        const canvas = createCanvas(200, 200)
+        qrcode.toCanvas(canvas, `WTPWarszawa_${type === '1' ? 'T' : 'B'}${id}`, {version: 1, errorCorrectionLevel: 'L', margin: 1, scale: 10})
+        return canvas.toBuffer()
     }
     async getBusDetails(busID){
 

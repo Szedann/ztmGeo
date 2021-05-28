@@ -106,19 +106,21 @@ async function showBusDetails(vehicleID, info){
     const details = await fetch(`/busDetails?busID=${vehicleID}`).then(res=>{return res.json()})
     busInfoDiv.innerHTML = `
     <h2 style="background-image: url('/busPicture?registrationID=${encodeURIComponent(details.registrationID)}')" >${details.vehicleID}</h2> <br>
-    <p>
-    Linia: <b>${info.Lines}</b> <br>
-    Producent: <b>${details.maker}</b> <br>
-    Model: <b>${details.model}</b> <br>
-    Rok produkcj: <b>${details.year}</b> <br>
-    Nr. rejestracyjny: <b>${details.registrationID}</b> <br>
-    Nr. autobusu: <b>${details.vehicleID}</b> <br>
-    Przewoźnik: <b id="bus-detail-carrier"></b> <br>
-    Zajezdnia: <b>${details.depot}</b> <br>
-    Biletomat: <b>${details.ticketMachine}</b> <br>
-    Wyposażenie: <b> <ul id="bus-detail-equipment"></ul></b> <br>
-    <!-- <a href="https://google.com/maps/place/${info.Lat},${info.Lon}" target="_blank"><i class="fas fa-map-marked-alt"></i>Lokalizacja w Google Maps</a> --!>
-    </p>
+    <div>
+    <span>Linia: <b>${info.Lines}</b></span>
+    <span>Producent: <b>${details.maker}</b></span>
+    <span>Model: <b>${details.model}</b></span>
+    <span>Rok produkcj: <b>${details.year}</b></span>
+    <span>Nr. rejestracyjny: <b>${details.registrationID}</b></span>
+    <span>Nr. autobusu: <b>${details.vehicleID}</b></span>
+    <span>Przewoźnik: <b id="bus-detail-carrier"></b></span>
+    <span>Zajezdnia: <b>${details.depot}</b></span>
+    <span>Biletomat: <b>${details.ticketMachine}</b></span>
+    Wyposażenie:
+    <b> <ul id="bus-detail-equipment"></ul></b>
+    Kod QR do skanowania biletów:
+    <img src="/qrCode?id=${details.vehicleID}&tracktype=0">
+    </div>
     `
     console.log(details)
     switch(details.carrier){

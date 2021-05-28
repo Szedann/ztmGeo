@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator kodów QR</title>
+    <link rel="stylesheet" href="css/qr.css">
+    <script>
+        function generate(){
+            const id = document.getElementById('id').value
+            const type = document.getElementById('type').value
+
+            document.getElementById('result').src = `/qrCode?id=${id}&tracktype=${type}`
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <h2>Generator kodów QR</h2>
+        <input type="text" id="id" placeholder="Nr. taborowy" autocomplete="off">
+        <select id="type">
+            <option value="0">Autobus</option>
+            <option value="1">Tramwaj</option>
+        </select>
+        <input type="button" value="generuj" onclick="generate()">
+        <img id="result" src="">
+
+    </main>
+</body>
+</html>

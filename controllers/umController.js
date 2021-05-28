@@ -23,6 +23,14 @@ exports.getBusDetails = async (req, res)=>{
     res.json(busDetails)
 }
 
+exports.getQRCode = (req, res)=>{
+    console.log('test')
+    const qr = ztm.getQRCode(req.query.id ? req.query.id : 1000, req.query.tracktype ? req.query.tracktype : 0)
+    console.log(qr)
+    res.type('png')
+    res.end(qr)
+}
+
 exports.getBusPhoto = async (req, res)=>{
     if(!req.query.registrationID) return res.end('Error: registrationID parameter is required')
     const imageURL = await ztm.getBusPicture(req.query.registrationID)
