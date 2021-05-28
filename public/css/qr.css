@@ -7,20 +7,57 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: clamp(10vw, 700px, 90vw);
     margin: 0 auto;
+    margin-top: 20px;
     background-color: white;
     border-left: 5px solid yellow;
     padding: 10px;
+    box-shadow: 2px 2px 5px #00000052;
 }
 
 input, select{
     outline: 0;
     border-radius: 0;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 1);
+    background-color: white;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 4px;
+}
+
+input[type="button"]{
+    font-weight: bold;
+    border-width: 2px;
 }
 
 main img{
-    width: 300px;
+    width: clamp(10vw, 400px, 100%);;
     margin: 0 auto;
+}
+
+.about{
+    color: black;
+    position: fixed;
+    bottom: 60px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    z-index: 10;
+    font-size: 2em;
+    background-color: rgb(255, 255, 255);
+    border-left: 5px solid yellow;
+}
+
+.about a{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    transition: transform 100ms;
+}
+
+.about a:hover{
+    transform: scale(1.2);
 }

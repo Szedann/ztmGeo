@@ -166,20 +166,20 @@ audio{
     color: black;
     position: fixed;
     bottom: 60px;
-    left: 0;
+    left: 10px;
     display: flex;
     flex-direction: column;
     padding: 5px;
     z-index: 10;
     font-size: 2em;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0 20px 20px 0;
+    background-color: rgb(255, 255, 255);
+    border-left: 5px solid yellow;
 }
 
 .about a{
     text-decoration: none;
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     margin: 5px;
     transition: transform 100ms;
 }

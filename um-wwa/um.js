@@ -44,7 +44,7 @@ class UM {
     }
     getQRCode(id = 1000, type = 0){
         const canvas = createCanvas(200, 200)
-        qrcode.toCanvas(canvas, `WTPWarszawa_${type === '1' ? 'T' : 'B'}${id}`, {version: 1, errorCorrectionLevel: 'L', margin: 1, scale: 10})
+        qrcode.toCanvas(canvas, `WTPWarszawa_${type === '1' ? 'T' : 'B'}${id}`, {version: 1, errorCorrectionLevel: 'L', margin: 1, scale: 15})
         return canvas.toBuffer()
     }
     async getBusDetails(busID){

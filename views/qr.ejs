@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>generator kodów QR</title>
     <link rel="stylesheet" href="css/qr.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script>
         function generate(){
             const id = document.getElementById('id').value
@@ -13,6 +16,11 @@
 
             document.getElementById('result').src = `/qrCode?id=${id}&tracktype=${type}`
         }
+        addEventListener('keyup', (event)=>{
+            if(event.key == "Enter" && document.activeElement.id == "id"){
+                generate()
+            }
+        })
     </script>
 </head>
 <body>
@@ -27,5 +35,9 @@
         <img id="result" src="">
 
     </main>
+    <div class="about">
+        <a href="/" class="fas fa-undo-alt"></a>
+        <a href="https://github.com/szedann/ztmGeo" target="_blank" class="fab fa-github"></a>
+    </div>
 </body>
 </html>

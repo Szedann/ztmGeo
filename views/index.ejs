@@ -6,8 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tajemnicze wehikuły miejskie</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="scripts/utils.js"></script>
+    <script>
+
+        function onload(){
+            const title = 'O projekcie'
+
+            const content = `Projekt wykonał <b>Kacper Żuk</b><br>
+            Wykorzystane zasoby:
+            <ol>
+                <li>Dane dotyczące komunikacji miejskiej - <a href="http://api.um.warszawa.pl" target="_blank">Miasto Stołeczne Warszawa</a></li>
+                <li>Mapy - <a href="https://www.mapbox.com/" target="_blank">mapbox</a></li>
+                <li>Zdjęcia - <a href="http://wawakom.pl" target="_blank">wawakom.pl</a>
+            </ol>`
+            document.getElementById("about-btn").onclick = function(){popup(title, content, 'about')}
+
+            // document.getElementById("manual-btn").onclick = function(){popupSRC("Instrukcja", "/data/instrukcja.txt", 'manual')}
+
+        }
+    </script>
 </head>
-<body>
+<body onload="onload()">
     <main>
         <h2>Tajemnicze wehikuły miejskie</h2>
         <div>
@@ -15,5 +37,9 @@
             <a href="/buses">lokalizacje autobusów</a>
         </div>
     </main>
+    <div class="about">
+        <a id="about-btn" class="fas fa-info-circle"></a>
+        <a href="https://github.com/szedann/ztmGeo" target="_blank" class="fab fa-github"></a>
+    </div>
 </body>
 </html>
