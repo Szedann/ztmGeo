@@ -1,8 +1,5 @@
 # ztmGeo
 
-### [Strona internetowa](https://sandown.live)
-###### (być może niedziałająca)
-
 >## Wykorzystane dane:
 > * Dane [Miasta Stołecznego Warszawa](1)
 > * Zdjęcia z portalu [wawakom.pl](http://wawakom.pl)
