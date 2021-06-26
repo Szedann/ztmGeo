@@ -21,6 +21,10 @@
                 generate()
             }
         })
+        function printImg() {
+            const pwin = window.open(document.getElementById("result").src,"_blank");
+            pwin.onload = ()=>{pwin.window.print()}
+        }
     </script>
 </head>
 <body>
@@ -33,6 +37,7 @@
         </select>
         <input type="button" value="generuj" onclick="generate()">
         <img id="result" src="">
+        <input type="button" value="drukuj" onclick="printImg()">
 
     </main>
     <div class="about">
